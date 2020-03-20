@@ -16,4 +16,14 @@ public class DissapearingPlatform : MonoBehaviour
     {
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine(TimeToWait());
+    }
+
+    IEnumerator TimeToWait()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(this.gameObject);
+    }
 }
