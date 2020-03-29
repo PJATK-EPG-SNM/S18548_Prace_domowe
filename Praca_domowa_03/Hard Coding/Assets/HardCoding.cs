@@ -9,71 +9,71 @@ public class HardCoding : MonoBehaviour
     void Start()
     {
         //zadanie 1
-        {
-            int calkowita = 7;
-            float przecinkowa = 7.7f;
-        }
+
+        int calkowita = 7;
+        float przecinkowa = 7.7f;
+
         //zadanie 2
-        {
-            bool dobre = true;
-            bool zle = false;
-        }
+
+        bool dobre = true;
+        bool zle = false;
+
         //zadanie 3
-        {
-            string nazwa = "Programuję w C#";
-            string epg = "EPG";
-        }
+
+        string nazwa = "Programuję w C#";
+        string epg = "EPG";
+
         //zadanie 4 
-        {
-            Debug.Log("calkowita = " + calkowita + "przecinkowa = " + przecinkowa + "dobre " + dobre + "zle " + zle + "nazwa : " + nazwa + "epg" + epg);
-        }
+
+        Debug.Log("calkowita = " + calkowita + " przecinkowa = " + przecinkowa + " dobre " + dobre + " zle " + zle + " nazwa : " + nazwa + " epg" + epg);
+
         //zadanie 5
+
+        if (calkowita == przecinkowa)
         {
-            if (calkowita == przecinkowa)
-            {
-                Debug.Log("Tak, są równe.");
-            }
-            else if (calkowita != przecinkowa)
-            {
-                Debug.Log("Nie są równe.");
-            }
-
-            if (calkowita < przecinkowa)
-            {
-                Debug.Log("Całkowita jest mniejsza.");
-            }
-            else if (calkowita > przecinkowa)
-            {
-                Debug.Log("Przecinkowa jest mniejsza.");
-            }
-
-            if (calkowita <= przecinkowa)
-            {
-                Debug.Log("Całkowita jest mniejsza lub równa.");
-            }
-            else if (calkowita >= przecinkowa)
-            {
-                Debug.Log("Całkowita jest większa lub równa.");
-            }
+            Debug.Log("Tak, są równe.");
         }
+        else if (calkowita != przecinkowa)
+        {
+            Debug.Log("Nie są równe.");
+        }
+
+        if (calkowita < przecinkowa)
+        {
+            Debug.Log("Całkowita jest mniejsza.");
+        }
+        else if (calkowita > przecinkowa)
+        {
+            Debug.Log("Przecinkowa jest mniejsza.");
+        }
+
+        if (calkowita <= przecinkowa)
+        {
+            Debug.Log("Całkowita jest mniejsza lub równa.");
+        }
+        else if (calkowita >= przecinkowa)
+        {
+            Debug.Log("Całkowita jest większa lub równa.");
+        }
+
         //zadanie 6 ???
+
+        if (nazwa == epg)
         {
-            if (nazwa == epg)
-            {
-                Debug.Log("Napisy są takie same.");
-            }
-            else
-            {
-                Debug.Log("Napisy są różne.");
-            }
+            Debug.Log("Napisy są takie same.");
         }
+        else
+        {
+            Debug.Log("Napisy są różne.");
+        }
+
         //zadanie 7
-        {
-            Koniunkcja(dobre, zle);
-            Alternatywa(dobre, zle);
-        }
+
+        Koniunkcja(dobre, zle);
+        Alternatywa(dobre, zle);
+    }
         //zadanie 8 - uporządkowanie
-    { 
+   
         public void Koniunkcja(bool dobre, bool zle)
         {
             if ((dobre == false) && (zle == false))
@@ -121,7 +121,7 @@ public class HardCoding : MonoBehaviour
                 Debug.Log("true");
             }
         }
-    }
+    
     void Update()
     {
 
