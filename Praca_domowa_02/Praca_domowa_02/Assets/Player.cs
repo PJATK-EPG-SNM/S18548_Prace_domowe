@@ -5,7 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 300;
-    public float jump = 500;
+    public float jump = 370;
+    public bool DeathWater = false;
+    public bool Enemy = false;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -28,10 +30,28 @@ public class Player : MonoBehaviour
             rb.AddForce(new Vector2(0, jump));
             isGrounded = false;
         }
+
+        if (DeathWater || Enemy == true)
+        {
+           Destroy(gameObject);
+            Application.LoadLevel(Application.loadedLevel);
+            
+        }
     }
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D colision)
     {
         isGrounded = true;
+        
+        if (colision.gameObject.name == "Water")
+        {
+            DeathWater = true;
+        }
+        if (colision.gameObject.name == "Enemy")
+       {
+            Enemy = true;
+        }
     }
+
+
 }
 
